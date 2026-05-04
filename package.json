@@ -1,0 +1,52 @@
+{
+  "name": "@izzudin/orthanc-client",
+  "version": "0.1.0",
+  "description": "A fully-typed TypeScript/JavaScript client library for the Orthanc DICOM server REST API",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "test": "bun test",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "orthanc",
+    "dicom",
+    "rest-api",
+    "client",
+    "typescript",
+    "medical-imaging",
+    "pacs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.15.33",
+    "@types/bun": "latest",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "^0.2.2"
+  },
+  "trustedDependencies": [
+    "@swc/core"
+  ]
+}
